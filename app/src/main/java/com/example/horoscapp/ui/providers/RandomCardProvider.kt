@@ -6,8 +6,7 @@ import javax.inject.Inject
 
 class RandomCardProvider @Inject constructor() {
     fun getLuckyCard(): LuckyModel? {
-        val random = (0..32).random()
-        return when (random) {
+        return when ((0..32).random()) {
             0 -> LuckyModel(R.drawable.card_fool, R.string.luck_0)
             1 -> LuckyModel(R.drawable.card_moon, R.string.luck_1)
             2 -> LuckyModel(R.drawable.card_hermit, R.string.luck_2)
